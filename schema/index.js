@@ -13,6 +13,12 @@ type Query {
   curso(id: Int): Curso
   profesor(id: Int): Profesor
 }
+
+type Mutation {
+  profesorAdd(profesor: NuevoProfesor): Profesor
+  profesorEdit(profesorId: Int!, profesor: EditProfesor): Profesor
+  profesorDelete(profesorId: Int!): Profesor
+}
 `
 
 const schema = makeExecutableSchema({
