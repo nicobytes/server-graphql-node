@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const myGraphQLSchema = require('./schema');
 
+require('./db/setup')
+
 
 const app = new express();
 
